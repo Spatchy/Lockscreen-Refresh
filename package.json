@@ -1,0 +1,11 @@
+{
+  "name": "lockscreen-refresh",
+  "version": "19.11.10",
+  "description": "Lockscreen Refresh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spatchy",
+  "license": "GPL-3.0-only"
+}
