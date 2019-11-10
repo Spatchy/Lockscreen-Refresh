@@ -4,7 +4,8 @@
   "description": "Lockscreen Refresh",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "author": "Spatchy",
   "license": "GPL-3.0-only",

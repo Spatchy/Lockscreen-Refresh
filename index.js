@@ -6,7 +6,6 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow() 
   Menu.setApplicationMenu(null)
-  console.log('we are here')
 
   mainWindow.loadFile("index.html")
 
