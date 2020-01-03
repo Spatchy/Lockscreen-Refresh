@@ -1,6 +1,6 @@
 {
   "name": "lockscreen-refresh",
-  "version": "19.11.10",
+  "version": "20.01.04",
   "description": "Lockscreen Refresh",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,9 @@
   "author": "Spatchy",
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "electron": "^7.1.1"
+    "electron": "^7.1.7"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
   }
 }
