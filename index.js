@@ -4,11 +4,15 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow() 
+  mainWindow = new BrowserWindow({
+    webPreferences: {
+      nodeIntegration: true
+    }
+  }) 
   Menu.setApplicationMenu(null)
 
   mainWindow.loadFile("index.html")
-
+  
   mainWindow.on('closed', function () {
     mainWindow = null
   })
