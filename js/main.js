@@ -16,12 +16,18 @@ function loadTagsFromArray () {
     });
 }
 
+function saveArray () {
+    dataToWrite = tags.join("\n");
+    fs.writeFileSync("tags.ini", dataToWrite, "utf-8");
+}
+
 function createEventListeners () {
     //add tags to array
     $("#addButton").on("click", function () {
         tags.push($("#tagBox").val());
         $("#tagContainer").empty();
         loadTagsFromArray(); // Refresh list
+        saveArray();
     });
 }
 
