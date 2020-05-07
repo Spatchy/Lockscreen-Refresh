@@ -46,6 +46,10 @@ function removeTag (tagId) {
     saveArray();
 }
 
+function getRandomTag () {
+    return tags[Math.floor(Math.random() * array.length)];
+}
+
 function createEventListeners () {
     //add tags to array
     $("#addButton").on("click", function () {
