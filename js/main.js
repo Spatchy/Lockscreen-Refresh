@@ -27,6 +27,7 @@ function loadTagsFromArray () {
     $.each(tags, function (i) {
       var li = $('<li/>')
       .addClass('listedTag')
+      .attr("id", "listedTag"+i)
       .appendTo(tagContainer)
       .text(tags[i]);
       console.log("added tag:" + tags[i]);
@@ -38,6 +39,13 @@ function saveArray () {
     fs.writeFileSync("tags.ini", dataToWrite, "utf-8");
 }
 
+function removeTag (tagId) {
+    $("#"+tagId).remove();
+    tagIndex = tagId.split("listedTag")[1];
+    tags.splice(tagIndex, 1);
+    saveArray();
+}
+
 function createEventListeners () {
     //add tags to array
     $("#addButton").on("click", function () {
@@ -46,11 +54,14 @@ function createEventListeners () {
         loadTagsFromArray(); // Refresh list
         saveArray();
     });
+
+    $(".listedTag").on("click", function (event) {
+        removeTag(event.target.id);
+    });
 }
 
 $(document).ready(function () {
     loadTagsFromArray();
     createEventListeners();
 });
-let fs = require("fs");
 
