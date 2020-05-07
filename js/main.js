@@ -4,6 +4,23 @@ const fs = require("fs");
 var data = fs.readFileSync('tags.ini', "utf-8");
 var tags = data.split('\n');
 
+function initFile () {
+    let filename = "tags.ini";
+    //Check if file exists
+    if(fs.existsSync(filename)) {
+        let data = fs.readFileSync(filename, 'utf8');
+        console.log(data);
+    } 
+    else {
+        console.log("File Doesn\'t Exist. Creating new file.")
+        fs.writeFile(filename, '', (err) => {
+            if(err){
+                console.log(err)
+            }
+        });
+    }
+}
+
 function loadTagsFromArray () {
     // Load tags to page from array
     var tagContainer = $("#tagContainer");
@@ -35,3 +52,5 @@ $(document).ready(function () {
     loadTagsFromArray();
     createEventListeners();
 });
+let fs = require("fs");
+
