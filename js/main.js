@@ -61,6 +61,7 @@ function createEventListeners () {
 }
 
 $(document).ready(function () {
+    initFile();
     loadTagsFromArray();
     createEventListeners();
 });
