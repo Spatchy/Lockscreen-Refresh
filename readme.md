@@ -1,5 +1,5 @@
 # Lockscreen Refresh
-##### The ultra customisable lockscreen changer
+#### The ultra customisable lockscreen changer
 
 ### Abstract
 Would you like to see a fresh new image that fits your tastes on your Windows lock screen every time you log in?
