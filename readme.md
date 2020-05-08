@@ -1,5 +1,5 @@
 # Lockscreen Refresh
-#### The ultra customisable lockscreen changer
+##### The ultra customisable lockscreen changer
 
 ### Abstract
 Would you like to see a fresh new image that fits your tastes on your Windows lock screen every time you log in?
@@ -11,7 +11,7 @@ The app is created using the Electron framework. Th current windows lockscreen i
 The backend is a simple API passthrough, programmed in PHP (yes, I know PHP ugh) that uses a securely stored API token(s) to fetch image links from an image provider, the current plan is to use Wallpaper Abyss. Once an image URL is obtained, it is passed to the app that then downloads the image and stores it as the user's lockscreen.
 
 ### Todo
-- Apply for wallpaper abyss API
+- ~~Apply for Wallpaper Abyss API~~ [done!]
 - Implement server-side API passthrough [in progress: ~50%]
 - Implement API calls and image downloading in app
 - Make a nicer GUI
