@@ -3,9 +3,9 @@ const fs = require("fs");
 
 var data = fs.readFileSync('tags.ini', "utf-8");
 var tags = data.split('\n');
+var filename = "tags.ini";
 
 function initFile () {
-    let filename = "tags.ini";
     //Check if file exists
     if(fs.existsSync(filename)) {
         let data = fs.readFileSync(filename, 'utf8');
@@ -36,7 +36,7 @@ function loadTagsFromArray () {
 
 function saveArray () {
     dataToWrite = tags.join("\n");
-    fs.writeFileSync("tags.ini", dataToWrite, "utf-8");
+    fs.writeFileSync(filename, dataToWrite, "utf-8");
 }
 
 function removeTag (tagId) {
@@ -48,6 +48,13 @@ function removeTag (tagId) {
 
 function getRandomTag () {
     return tags[Math.floor(Math.random() * array.length)];
+}
+
+function makeApiRequest (tagToSend) {
+    $.get("https://api.spatchy.net", {app:"lockscreen-refresh", tag:tagToSend}, function (data, status) {
+        console.log("status: " + status);
+        fs.writeFileSync("./cache/"+tagToSend+".json", data);
+    });
 }
 
 function createEventListeners () {
@@ -68,5 +75,6 @@ $(document).ready(function () {
     initFile();
     loadTagsFromArray();
     createEventListeners();
+    makeApiRequest("nature"); // test request
 });
 
