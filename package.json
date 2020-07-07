@@ -10,7 +10,7 @@
   "author": "Spatchy",
   "license": "GPL-3.0-only",
   "devDependencies": {
-    "electron": "^7.1.9"
+    "electron": "^7.2.4"
   },
   "dependencies": {
     "jquery": "^3.5.1"
