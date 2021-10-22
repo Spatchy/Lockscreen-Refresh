@@ -1,6 +1,9 @@
 # Lockscreen Refresh
 #### The ultra customisable lockscreen changer
 
+## Archived
+This project is archived. I'm currently working on better things than re-inventing features Windows already has
+
 ### Abstract
 Would you like to see a fresh new image that fits your tastes on your Windows lock screen every time you log in?
 Then this is the app for you! No more seeing the same static image over and over or letting Windows Spotlight play guessing games, simply tell Lockscreen Refresh what you like and let it fetch a spicy new image for your lockscreen every day!
